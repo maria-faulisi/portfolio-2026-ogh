@@ -21,4 +21,19 @@ This is a minimal React 19 + TypeScript + Vite SPA that serves as a showcase/con
 
 **Styling:** `src/index.css` holds global CSS custom properties (colors, fonts, spacing) with light/dark mode via `prefers-color-scheme`. Component styles use CSS nesting in `src/App.css`. Design tokens from the OHG library use the `--ohg-*` prefix.
 
-**Entry point:** `src/main.tsx` → `src/App.tsx`. The app is a single component with no routing or external data sources.
+**Routing:** React Router v7 (`react-router-dom`) with `BrowserRouter` in `src/main.tsx`. `src/App.tsx` is the layout shell (header, back-link, footer) with `<Routes>` defined inline. Pages live in `src/pages/`, case study components in `src/case-studies/`.
+
+**Entry point:** `src/main.tsx` → `src/App.tsx` (layout + routes) → page/case-study components.
+
+**Route map:**
+- `/` → `src/pages/Home.tsx`
+- `/design-systems/allstate` → `src/case-studies/DesignSystemsAllstate.tsx`
+- `/design-systems/harvest` → `src/case-studies/DesignSystemsHarvest.tsx`
+- `/design-systems/panduit` → `src/case-studies/DesignSystemsPanduit.tsx`
+- `/design/allstate` → `src/case-studies/DesignAllstate.tsx`
+- `/design/harvest` → `src/case-studies/DesignHarvest.tsx`
+- `/design/panduit` → `src/case-studies/DesignPanduit.tsx`
+
+## Code style
+
+- **React components use arrow functions:** `const Foo = () => { ... }`, not `function Foo() { ... }`
