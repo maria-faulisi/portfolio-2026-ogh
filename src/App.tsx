@@ -1,119 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import Home from './pages/Home'
+import DesignSystemsAllstate from './case-studies/DesignSystemsAllstate'
+import DesignSystemsHarvest from './case-studies/DesignSystemsHarvest'
+import DesignSystemsPanduit from './case-studies/DesignSystemsPanduit'
+import DesignAllstate from './case-studies/DesignAllstate'
+import DesignHarvest from './case-studies/DesignHarvest'
+import DesignPanduit from './case-studies/DesignPanduit'
 
+const BackLink = () => {
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+  if (isHome) return null
+  return (
+    <nav className="breadcrumb">
+      <Link to="/">← Back</Link>
+    </nav>
+  )
+}
+
+const App = () => {
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
+      <header>
+        <nav>
+          <Link to="/" className="nav-name">Maria Faulisi</Link>
           <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
+            <li><a href="/#design-systems">Work</a></li>
+            <li><a href="/#contact">Contact</a></li>
           </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+        </nav>
+      </header>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <BackLink />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/design-systems/allstate" element={<DesignSystemsAllstate />} />
+        <Route path="/design-systems/harvest" element={<DesignSystemsHarvest />} />
+        <Route path="/design-systems/panduit" element={<DesignSystemsPanduit />} />
+        <Route path="/design/allstate" element={<DesignAllstate />} />
+        <Route path="/design/harvest" element={<DesignHarvest />} />
+        <Route path="/design/panduit" element={<DesignPanduit />} />
+      </Routes>
+
+      <footer>
+        <a href="mailto:mjfaulisi@gmail.com">mjfaulisi@gmail.com</a>
+        <a href="https://linkedin.com/in/mariafaulisi" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/mariafaulisi" target="_blank" rel="noreferrer">GitHub</a>
+      </footer>
     </>
   )
 }
