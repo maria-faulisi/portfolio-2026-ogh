@@ -1,3 +1,8 @@
+import designAllstateScreens from '../assets/design-allstate-screens.png'
+import designMockup from '../assets/design-mockup.png'
+import designAllstateFlow from '../assets/design-allstate-flow.jpg'
+import designAllstateCompare from '../assets/design-allstate-compare.jpg'
+
 const DesignAllstate = () => {
   return (
     <article className="case-study">
@@ -13,41 +18,64 @@ const DesignAllstate = () => {
         </dl>
       </header>
 
+      <img src={designAllstateScreens} alt="Allstate quote flow screens" className="case-study-hero" />
+
       <section className="tldr">
         <h2>TL;DR</h2>
         <dl>
           <dt>Problem</dt>
-          <dd>"Quote flows grew unpredictable as questions multiplied across drivers and vehicles."</dd>
+          <dd>Quote flows grew unpredictable as questions multiplied across drivers and vehicles.</dd>
           <dt>Insight</dt>
-          <dd>"Complexity came from flow structure, not the data being collected."</dd>
+          <dd>Complexity came from flow structure, not the data being collected.</dd>
           <dt>Outcome</dt>
-          <dd>"Reduced friction and improved predictability without changing underwriting rules."</dd>
+          <dd>Reduced friction and improved predictability without changing underwriting rules.</dd>
         </dl>
       </section>
+
+      <img src={designMockup} alt="" className="case-study-mockup" />
 
       <section>
         <h2>The Problem</h2>
         <p>
-          The quoted experience faced structural challenges rather than pure speed issues.
-          The flow lacked grounding in standard household configurations, failed to account for
-          multiple drivers and vehicles (data repetition across entities), and offered no
-          predictability in completion time estimates.
+          The quote experience faced structural challenges. The flow lacked grounding in standard
+          household configurations, failed to account for multiple drivers and vehicles, and offered
+          no predictability in completion time.
         </p>
-        <blockquote>
-          "Question count increased exponentially, not because of the data being collected,
-          but because of how the flow was structured."
-        </blockquote>
-        <h3>Scaling Illustration</h3>
         <ul>
-          <li>1 question</li>
-          <li>1 question × 4 drivers</li>
-          <li>1 question × 4 drivers × 3 vehicles</li>
+          <li>Grounding in the standard household size</li>
+          <li>Accounting for multiple drivers and vehicles</li>
+          <li>Predictability in completion time</li>
         </ul>
+
+        <div className="flow-scaling">
+          <div className="flow-step">
+            <h4>1 Question</h4>
+            <div className="flow-rows">
+              <img src={designAllstateFlow} alt="1 question" />
+            </div>
+          </div>
+          <div className="flow-step">
+            <h4>1 Question × 4 Drivers</h4>
+            <div className="flow-rows">
+              {[0, 1, 2, 3].map(i => (
+                <img key={i} src={designAllstateFlow} alt="" />
+              ))}
+            </div>
+          </div>
+          <div className="flow-step">
+            <h4>1 Question × 4 Drivers × 3 Vehicles</h4>
+            <div className="flow-rows">
+              {Array.from({ length: 12 }, (_, i) => (
+                <img key={i} src={designAllstateFlow} alt="" />
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>Constraints</h2>
-        <p>Solutions required preserving:</p>
+        <p>Any solution had to preserve:</p>
         <ul>
           <li>Regulatory compliance</li>
           <li>Underwriting completeness</li>
@@ -59,24 +87,37 @@ const DesignAllstate = () => {
       </section>
 
       <section>
-        <h2>Central Insight</h2>
+        <h2>The Insight</h2>
         <blockquote>
           "Perceived effort is driven more by the number of questions than the number of inputs."
         </blockquote>
       </section>
 
       <section>
-        <h2>The Solution</h2>
-        <p>
-          Changed from question multiplication across dimensions to fixed questions with variable
-          driver inputs.
-        </p>
-        <dl>
-          <dt>Before</dt>
-          <dd>Questions × Drivers × Vehicles — each driver navigated identical vehicle questions repeatedly.</dd>
-          <dt>After</dt>
-          <dd>Fixed questions, variable driver inputs — each vehicle contained fixed questions; drivers appeared as input selections.</dd>
-        </dl>
+        <h2>My Proposal</h2>
+        <p>Instead of reducing data, I changed which dimension scaled.</p>
+
+        <div className="before-after">
+          <div className="before">
+            <p className="label">Before</p>
+            <h3>Driver-centric Flow</h3>
+            <p>Each driver was walked through the same vehicle questions repeatedly.</p>
+          </div>
+          <div className="after">
+            <p className="label">After</p>
+            <h3>Fixed-Question / Variable-Input Flow</h3>
+            <p>Each vehicle had a fixed set of questions. Drivers were selected as inputs within each question.</p>
+          </div>
+        </div>
+
+        <figure className="flow-figure">
+          <figcaption>1 Question, 4 Driver Inputs</figcaption>
+          <img src={designAllstateCompare} alt="1 question with 4 driver inputs" />
+        </figure>
+        <figure className="flow-figure">
+          <figcaption>1 Question × 3 Vehicles</figcaption>
+          <img src={designAllstateCompare} alt="1 question across 3 vehicles" />
+        </figure>
       </section>
 
       <section className="metrics">
@@ -119,10 +160,6 @@ const DesignAllstate = () => {
           where a system breaks and making that constraint visible so the organization can decide
           how to respond."
         </blockquote>
-        <p>
-          The work demonstrated that delays originated in upstream data modeling and sequencing
-          rather than interface design execution.
-        </p>
       </section>
     </article>
   )

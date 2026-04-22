@@ -1,3 +1,8 @@
+import designMockup from '../assets/design-mockup.png'
+import designPanduit01 from '../assets/design-panduit-01.jpg'
+import designPanduitScreens from '../assets/design-panduit-screens.png'
+import designPanduit02 from '../assets/design-panduit-02.png'
+
 const DesignPanduit = () => {
   return (
     <article className="case-study">
@@ -13,17 +18,21 @@ const DesignPanduit = () => {
         </dl>
       </header>
 
+      <img src={designPanduit01} alt="Panduit distributor portal" className="case-study-hero" />
+
       <section className="tldr">
         <h2>TL;DR</h2>
         <dl>
           <dt>Problem</dt>
           <dd>Aging portal required modernization despite frozen APIs and tight deadlines.</dd>
           <dt>Insight</dt>
-          <dd>"API behavior isn't a constraint to work around, it's the system you're designing."</dd>
+          <dd>API behavior isn't a constraint to work around, it's the system you're designing.</dd>
           <dt>Outcome</dt>
           <dd>Launched on schedule without backend modifications. Component patterns mitigated risk and expedited future development.</dd>
         </dl>
       </section>
+
+      <img src={designMockup} alt="" className="case-study-mockup" />
 
       <section>
         <h2>The Problem</h2>
@@ -35,18 +44,19 @@ const DesignPanduit = () => {
         <ul>
           <li>
             <strong>Unclear validation and error prevention</strong> — users made preventable
-            errors because validation feedback misaligned with actual backend rules. Error
-            messaging occurred post-submission rather than during data entry.
+            errors because validation feedback misaligned with actual backend rules.
           </li>
           <li>
             <strong>Inconsistent system status visibility</strong> — progress tracking was vague
-            or missing. Unconfirmed actions left users uncertain about completion.
+            or missing. Silent failures left users uncertain about completion.
           </li>
           <li>
             <strong>Inefficient task flows</strong> — navigation structured around internal data
-            architecture rather than user objectives, requiring extra steps and cognitive load.
+            architecture rather than user objectives.
           </li>
         </ul>
+
+        <img src={designPanduitScreens} alt="Legacy portal screens" className="case-study-screens" />
       </section>
 
       <section>
@@ -62,8 +72,21 @@ const DesignPanduit = () => {
       <section>
         <h2>The Insight</h2>
         <blockquote>
-          "API behavior and edge cases represent the system being designed."
+          "API behavior and edge cases are the system you're designing."
         </blockquote>
+      </section>
+
+      <section>
+        <h2>The Solution</h2>
+        <p>
+          Modernized the portal experience within existing technical infrastructure — task-based
+          navigation, real-time validation, and component patterns that encoded API constraints.
+        </p>
+
+        <div className="solution-screens">
+          <img src={designPanduit01} alt="Modernized portal screens" />
+          <img src={designPanduit02} alt="Modernized portal detail" />
+        </div>
       </section>
 
       <section>
@@ -71,33 +94,33 @@ const DesignPanduit = () => {
         <dl>
           <dt>Design From Technical Reality</dt>
           <dd>
-            Collaborate with engineering to document API behavior, validation protocols, and
-            exceptions beforehand. Backend limitations transform into design specifications.
+            Partner with engineering to map API behavior, validation rules, and edge cases upfront.
+            Backend constraints become design specifications.
           </dd>
           <dt>Components Encode Constraints</dt>
           <dd>
-            Establish patterns where validation aligns with backend rules, error states mirror
-            actual system issues, and loading reflects API responses.
+            Design patterns where validation matches backend rules, error states reflect actual
+            failures, and loading reflects API responses.
           </dd>
           <dt>IA That Leverages Endpoints</dt>
           <dd>
-            Reorganize navigation around user objectives using current API infrastructure.
-            Identical backend, optimized coordination.
+            Reorganize navigation around user tasks using existing API calls. Same backend, smarter
+            orchestration.
           </dd>
           <dt>Strategic Prioritization</dt>
           <dd>
-            Emphasize enhancements leveraging existing backend functionality. Achieve UX
-            improvements without technical liability or implementation complexity.
+            Prioritize improvements that reuse backend behavior. Deliver UX gains without technical
+            debt or implementation complexity.
           </dd>
           <dt>Validation Within Constraints</dt>
           <dd>
-            Investigation confirming both user advantages and technical viability. Implement
-            valuable, shippable solutions.
+            Research that validates both user value and technical feasibility. Build what matters
+            and what ships.
           </dd>
           <dt>Scalable Collaboration</dt>
           <dd>
-            Establish component frameworks and transfer procedures minimizing continuous
-            management. Create reusable foundations for teams.
+            Build component patterns and handoff processes that reduce ongoing oversight. Establish
+            foundations for teams.
           </dd>
         </dl>
       </section>
@@ -106,34 +129,31 @@ const DesignPanduit = () => {
         <h2>Impact</h2>
         <h3>Delivered on time without backend rewrites</h3>
         <p>
-          The constraint-centered strategy eliminated rework patterns common in enterprise
-          overhauls. Engineering executed confidently because designs mirrored genuine system
-          operation.
+          The constraint-first approach eliminated the rework cycles that typically plague
+          enterprise redesigns.
         </p>
         <h3>Component patterns accelerated subsequent features</h3>
         <p>
-          The design vocabulary unified design and engineering teams. Error management shifted
-          from reactive to anticipatory. Edge cases received attention during design phases
-          rather than in live environments.
+          The design system created a shared vocabulary between design and engineering. Error
+          handling became anticipatory rather than reactive.
         </p>
         <h3>Users responded positively</h3>
         <p>
-          The modernized portal reflected current expectations while preserving operational
-          dependability.
+          Customer feedback indicated they "loved" the modernized experience. The updated portal
+          aligned with contemporary enterprise tool expectations.
         </p>
       </section>
 
       <section>
         <h2>Reflection</h2>
         <p>
-          Substantial improvements don't demand complete rebuilds; they demand designing aligned
-          with technical actuality. Initial engineering partnership avoids costly
-          "aesthetically appealing but technically impossible" scenarios that undermine timelines.
+          Meaningful improvements don't require rewrites — they require designing from technical
+          reality. Early engineering partnership avoids costly "aesthetically appealing but
+          technically impossible" scenarios.
         </p>
         <p>
-          For multidisciplinary roles, this represents essential capability: constructing systems
-          balancing usability with buildability through treating limitations as design factors,
-          not barriers.
+          For hybrid roles, this is the core competency: making systems both more usable and more
+          buildable by treating limitations as design factors, not barriers.
         </p>
       </section>
     </article>

@@ -1,3 +1,8 @@
+import dsAllstateHero from '../assets/ds-allstate-hero.png'
+import dsAllstateDiagram from '../assets/ds-allstate-diagram.svg'
+import dsAllstateIcon from '../assets/ds-allstate-icon.svg'
+import dsAllstateChart from '../assets/ds-allstate-chart.svg'
+
 const DesignSystemsAllstate = () => {
   return (
     <article className="case-study">
@@ -12,6 +17,8 @@ const DesignSystemsAllstate = () => {
           <dd>Multi-tool System</dd>
         </dl>
       </header>
+
+      <img src={dsAllstateHero} alt="Allstate Mesh Design System" className="case-study-hero" />
 
       <section className="metrics">
         <ul>
@@ -32,10 +39,22 @@ const DesignSystemsAllstate = () => {
           of sync over time, causing inconsistencies in component names, spacing tokens, and
           accessibility specifications.
         </p>
-        <ul>
-          <li>Sketch for design</li>
-          <li>Zeplin for handoff</li>
-          <li>Styleguidist for React components</li>
+        <ul className="tool-cards">
+          <li className="tool-card">
+            <img src={dsAllstateDiagram} alt="Sketch" />
+            <h4>Sketch for design</h4>
+            <p>Out of date library components or bespoke designs used for feature development.</p>
+          </li>
+          <li className="tool-card">
+            <img src={dsAllstateIcon} alt="Zeplin" />
+            <h4>Zeplin for handoff</h4>
+            <p>Sketch affected Zeplin's validity when designers neglected to ensure compliance.</p>
+          </li>
+          <li className="tool-card">
+            <img src={dsAllstateChart} alt="Styleguidist" />
+            <h4>Styleguidist for React Components</h4>
+            <p>Designers didn't use Styleguidist to confirm compliance so engineers assumed rework was required.</p>
+          </li>
         </ul>
       </section>
 

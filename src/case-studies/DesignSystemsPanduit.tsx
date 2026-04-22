@@ -1,3 +1,5 @@
+import dsPanduitHero from '../assets/ds-panduit-hero.png'
+
 const DesignSystemsPanduit = () => {
   return (
     <article className="case-study">
@@ -13,6 +15,8 @@ const DesignSystemsPanduit = () => {
         </dl>
       </header>
 
+      <img src={dsPanduitHero} alt="Panduit AEM Design System" className="case-study-hero" />
+
       <section className="metrics">
         <ul>
           <li><strong>30–40%</strong> Faster page builds for content authors</li>
@@ -24,7 +28,12 @@ const DesignSystemsPanduit = () => {
 
       <section>
         <h2>The Challenge</h2>
-        <p>Panduit's digital landscape wasn't just fragmented, it was political.</p>
+        <h3>Panduit's digital landscape wasn't just fragmented, it was political.</h3>
+        <p>
+          Every business unit owned its own microsite and used that ownership as leverage in
+          broader internal negotiations. Introducing a shared system meant asking teams to give
+          up control they'd fought to keep.
+        </p>
         <ul>
           <li>Serve global teams with different languages and priorities</li>
           <li>Support non-technical content authors</li>
@@ -40,6 +49,15 @@ const DesignSystemsPanduit = () => {
           <li>Trained non-technical content authors</li>
           <li>Served as interim product owner</li>
         </ol>
+      </section>
+
+      <section>
+        <h2>Key Learnings</h2>
+        <ul>
+          <li>"Design systems often start as alignment work, not interface work."</li>
+          <li>"Reducing rework by clarifying contracts between design, handoff, and implementation."</li>
+          <li>"A system succeeds when non-technical authors can't break it."</li>
+        </ul>
       </section>
     </article>
   )

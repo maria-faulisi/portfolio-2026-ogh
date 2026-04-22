@@ -1,3 +1,13 @@
+import designMockup from '../assets/design-mockup.png'
+import designHarvest01 from '../assets/design-harvest-01.jpg'
+import designHarvest02 from '../assets/design-harvest-02.jpg'
+import designHarvest03 from '../assets/design-harvest-03.jpg'
+import designHarvest04 from '../assets/design-harvest-04.jpg'
+import designHarvest05 from '../assets/design-harvest-05.jpg'
+import designHarvest06 from '../assets/design-harvest-06.jpg'
+import designHarvest07 from '../assets/design-harvest-07.jpg'
+import designHarvest08 from '../assets/design-harvest-08.jpg'
+
 const DesignHarvest = () => {
   return (
     <article className="case-study">
@@ -13,17 +23,21 @@ const DesignHarvest = () => {
         </dl>
       </header>
 
+      <img src={designHarvest01} alt="Harvest reporting workflow" className="case-study-hero" />
+
       <section className="tldr">
         <h2>TL;DR</h2>
         <dl>
           <dt>Problem</dt>
-          <dd>"Reporting features evolved as separate workflows, creating duplicated setup and confusion."</dd>
+          <dd>Reporting features evolved as separate workflows, creating duplicated setup and confusion.</dd>
           <dt>Insight</dt>
-          <dd>"Saving and scheduling reflected the same user intent but were modeled independently."</dd>
+          <dd>Saving and scheduling reflected the same user intent but were modeled independently.</dd>
           <dt>Outcome</dt>
-          <dd>"Unified the workflow, reduced rework, and shipped without increasing scope."</dd>
+          <dd>Unified the workflow, reduced rework, and shipped without increasing scope.</dd>
         </dl>
       </section>
+
+      <img src={designMockup} alt="" className="case-study-mockup" />
 
       <section>
         <h2>The Problem</h2>
@@ -37,14 +51,38 @@ const DesignHarvest = () => {
           <li>Parallel logic duplicating behavior across separate paths</li>
           <li>Inconsistent user expectations</li>
         </ul>
-        <blockquote>
-          "Recreating the saved report experience without re-evaluating the underlying user task
-          broke the mental model."
-        </blockquote>
-        <p>
-          Initial design showed parallel flows: Run Report → Save Report → Saved Report List
-          and Run Report → Create Recurring Report → Recurring Report List.
-        </p>
+
+        <h4>Initial design: parallel flows</h4>
+        <div className="flow-comparison">
+          <div className="flow-column">
+            <figure>
+              <figcaption>Run Report</figcaption>
+              <img src={designHarvest01} alt="Run Report screen" />
+            </figure>
+            <figure>
+              <figcaption>Save Report</figcaption>
+              <img src={designHarvest02} alt="Save Report screen" />
+            </figure>
+            <figure>
+              <figcaption>Saved Report List</figcaption>
+              <img src={designHarvest03} alt="Saved Report List screen" />
+            </figure>
+          </div>
+          <div className="flow-column">
+            <figure>
+              <figcaption>Run Report</figcaption>
+              <img src={designHarvest01} alt="Run Report screen" />
+            </figure>
+            <figure>
+              <figcaption>Create Recurring Report</figcaption>
+              <img src={designHarvest04} alt="Create Recurring Report screen" />
+            </figure>
+            <figure>
+              <figcaption>Recurring Report List</figcaption>
+              <img src={designHarvest05} alt="Recurring Report List screen" />
+            </figure>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -66,13 +104,36 @@ const DesignHarvest = () => {
       </section>
 
       <section>
-        <h2>The Proposal</h2>
-        <dl>
-          <dt>Before</dt>
-          <dd>Parallel flows requiring separate setup and logic.</dd>
-          <dt>After</dt>
-          <dd>Run Report → Save Report with Recurring Options → Saved Report Edit Recurring</dd>
-        </dl>
+        <h2>My Proposal</h2>
+        <p>Build on the saved report foundation instead of duplicating it.</p>
+
+        <div className="before-after">
+          <div className="before">
+            <p className="label">Before</p>
+            <h3>Parallel Flows</h3>
+            <p>Save and recurring export required separate setup and separate logic.</p>
+          </div>
+          <div className="after">
+            <p className="label">After</p>
+            <h3>Unified Workflow</h3>
+            <p>Save once, then optionally schedule export from the same configuration.</p>
+          </div>
+        </div>
+
+        <div className="flow-sequence">
+          <figure>
+            <figcaption>Run Report</figcaption>
+            <img src={designHarvest06} alt="Run Report — unified flow" />
+          </figure>
+          <figure>
+            <figcaption>Save Report with Recurring Options</figcaption>
+            <img src={designHarvest07} alt="Save Report with Recurring Options" />
+          </figure>
+          <figure>
+            <figcaption>Saved Report Edit Recurring</figcaption>
+            <img src={designHarvest08} alt="Saved Report Edit Recurring" />
+          </figure>
+        </div>
       </section>
 
       <section>
@@ -103,10 +164,6 @@ const DesignHarvest = () => {
           "A hybrid background brings a responsibility to speak up, contribute thoughtfully,
           and help teams move forward."
         </blockquote>
-        <p>
-          Key philosophy: operate from a shared goals mindset where ideas surface early and
-          teams move together.
-        </p>
       </section>
     </article>
   )

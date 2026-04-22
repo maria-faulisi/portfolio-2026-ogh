@@ -1,3 +1,5 @@
+import dsHarvestHero from '../assets/ds-harvest-hero.png'
+
 const DesignSystemsHarvest = () => {
   return (
     <article className="case-study">
@@ -9,9 +11,11 @@ const DesignSystemsHarvest = () => {
           <dt>Role</dt>
           <dd>Software Engineer II</dd>
           <dt>Platform</dt>
-          <dd>AEM app (enterprise portal)</dd>
+          <dd>Rails + React</dd>
         </dl>
       </header>
+
+      <img src={dsHarvestHero} alt="Harvest Porchlight Design System" className="case-study-hero" />
 
       <section className="metrics">
         <ul>
