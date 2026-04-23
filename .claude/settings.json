@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"\nimport sys, json, os\ndata = json.load(sys.stdin)\nfile_path = data.get('tool_input', {}).get('file_path', '')\nif not file_path.endswith(('.ts', '.tsx')):\n    sys.exit(0)\ndir_path = os.path.dirname(os.path.abspath(file_path))\nprettier_config = None\nwhile True:\n    rc_path = os.path.join(dir_path, '.prettierrc')\n    if os.path.exists(rc_path):\n        with open(rc_path) as f:\n            prettier_config = json.load(f)\n        break\n    parent = os.path.dirname(dir_path)\n    if parent == dir_path:\n        break\n    dir_path = parent\nif prettier_config:\n    context = 'Prettier config for this project: ' + json.dumps(prettier_config) + '. Format all TypeScript/TSX output to match these settings before writing.'\n    print(json.dumps({'hookSpecificOutput': {'hookEventName': 'PreToolUse', 'additionalContext': context}}))\n\" 2>/dev/null || true",
+            "statusMessage": "Reading Prettier config..."
+          }
+        ]
+      }
+    ]
+  }
+}
