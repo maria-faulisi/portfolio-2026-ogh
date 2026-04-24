@@ -1,4 +1,3 @@
-import designMockup from "../assets/design-mockup.png";
 import designHarvest01 from "../assets/design-harvest-01.jpg";
 import designHarvest02 from "../assets/design-harvest-02.jpg";
 import designHarvest03 from "../assets/design-harvest-03.jpg";

@@ -1,4 +1,3 @@
-import designMockup from "../assets/design-mockup.png";
 import designPanduit01 from "../assets/design-panduit-01.jpg";
 import designPanduitScreens from "../assets/design-panduit-screens.png";
 import designPanduit02 from "../assets/design-panduit-02.png";
