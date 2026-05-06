@@ -1,241 +1,296 @@
+import { Link } from "react-router-dom";
 import designAllstateScreens from "../assets/design-allstate-screens.png";
 import designAllstateFlow from "../assets/design-allstate-flow.jpg";
 import designAllstateCompare from "../assets/design-allstate-compare.jpg";
+import KindredWork from "../components/KindredWork";
+import Reveal from "../components/Reveal";
+import { work } from "../data/work";
+
+const w = work["d-allstate"];
 
 const DesignAllstate = () => {
   return (
-    <article className="case-study">
-      <header className="case-study-header">
-        <p className="eyebrow">Case Study</p>
-        <h1>Allstate</h1>
-        <h2>
-          Reducing Structural Complexity in a Multi-Driver, Multi-Vehicle Flow
-        </h2>
-        <p>Role: Senior UX Architect</p>
-        <p>Industry: Financial Services</p>
-      </header>
-
-      <img
-        src={designAllstateScreens}
-        alt="Allstate quote flow screens"
-        className="case-study-hero"
-      />
-
-      <section className="tldr">
-        <h3>TL;DR</h3>
-        <dl>
-          <dt>Problem:</dt>
-          <dd>
-            Quote flows grew unpredictable as questions multiplied across
-            drivers and vehicles.
-          </dd>
-          <dt>Insight:</dt>
-          <dd>
-            Complexity came from flow structure, not the data being collected.
-          </dd>
-          <dt>Outcome:</dt>
-          <dd>
-            Reduced friction and improved predictability without changing
-            underwriting rules.
-          </dd>
-        </dl>
-      </section>
-
-      <section>
-        <h2>The Problem</h2>
-        <p>
-          The quote flow was perceived as slow, but the underlying issue was
-          structural. Early designs optimized for individual steps without
-          grounding the experience in how real households scale.
-        </p>
-        <p>Specifically, the flow lacked:</p>
-        <ul>
-          <li>
-            <strong>Grounding in the standard household size</strong> — The
-            experience was not designed around a typical household
-            configuration, treating common scenarios like edge cases.
-          </li>
-          <li>
-            <strong>Accounting for multiple drivers and vehicles</strong> —
-            Questions were repeated per driver and per vehicle, even when the
-            data being collected was common.
-          </li>
-          <li>
-            <strong>Predictability in completion time</strong> — Users and
-            agents had no clear sense of how long the quote would take as
-            complexity increased.
-          </li>
-        </ul>
-        <p>
-          Question count increased exponentially, not because of the data being
-          collected, but because of how the flow was structured.
-        </p>
-
-        <div className="flow-scaling">
-          <div className="flow-step">
-            <h4>1 Question</h4>
-            <div className="flow-rows">
-              <img src={designAllstateFlow} alt="1 question" />
-            </div>
-          </div>
-          <div className="flow-step">
-            <h4>1 Question x 4 Drivers</h4>
-            <div className="flow-rows">
-              {[0, 1, 2, 3].map((i) => (
-                <img key={i} src={designAllstateFlow} alt="" />
-              ))}
-            </div>
-          </div>
-          <div className="flow-step">
-            <h4>1 Question x 4 Drivers x 3 Vehicles</h4>
-            <div className="flow-rows">
-              {Array.from({ length: 12 }, (_, i) => (
-                <img key={i} src={designAllstateFlow} alt="" />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Constraints</h2>
-        <h4>Any solution had to preserve:</h4>
-        <ul>
-          <li>Regulatory compliance</li>
-          <li>Underwriting completeness</li>
-          <li>Agent defensibility</li>
-          <li>Existing back-end data models</li>
-          <li>Fixed engineering scope</li>
-          <li>Operational impact on agents</li>
-        </ul>
-        <p>
-          Removing questions or deferring data would have created downstream
-          risk. The solution had to change the structure, not the requirements.
-        </p>
-      </section>
-
-      <section>
-        <h2>The Insight</h2>
-        <h1>
-          Perceived effort is driven more by the number of questions than the
-          number of inputs
-        </h1>
-      </section>
-
-      <section>
-        <h2>My Proposal</h2>
-        <p>Instead of reducing data, I changed which dimension scaled:</p>
-        <ul>
-          <li>Old model: Questions x Drivers x Vehicles</li>
-          <li>Proposed model: Fixed questions, variable driver inputs</li>
-        </ul>
-
-        <div className="before-after">
-          <div className="before">
-            <p className="label">Before</p>
-            <h3>Driver-centric Flow</h3>
-            <h4>Driver-centric Flow</h4>
-            <p>
-              Each driver was walked through the same vehicle questions
-              repeatedly.
-            </p>
-          </div>
-          <div className="after">
-            <p className="label">After</p>
-            <h3>Fixed-Question / Variable-Input Flow</h3>
-            <h4>Fixed-Question / Variable-Input Flow</h4>
-            <p>
-              Each vehicle had a fixed set of questions. Drivers were selected
-              as inputs within each question.
-            </p>
-          </div>
+    <article>
+      <section className="container case-study">
+        <div className="case-meta-bar">
+          <Link to="/">← Index</Link>
+          <span className="dot">·</span>
+          <span>{w.index}</span>
+          <span className="dot">·</span>
+          <span>{w.discipline}</span>
+          <span className="dot">·</span>
+          <span>{w.company}</span>
         </div>
 
-        <figure className="flow-figure">
-          <figcaption>1 Question, 4 Driver Inputs</figcaption>
-          <img
-            src={designAllstateCompare}
-            alt="1 question with 4 driver inputs"
-          />
-        </figure>
-        <figure className="flow-figure">
-          <figcaption>1 Question x 3 Vehicles</figcaption>
-          <img src={designAllstateCompare} alt="1 question across 3 vehicles" />
-        </figure>
+        <Reveal className="case-hero">
+          <p className="case-index">Case Study {w.index} / 06</p>
+          <h1 className="serif">
+            Reducing complexity in a
+            <br />
+            <em>multi-driver</em> quote flow.
+          </h1>
+          <p className="lead">
+            The quote flow felt slow. The real issue was structural —
+            questions multiplying across drivers and vehicles. I changed which
+            dimension scaled, not what the system asked.
+          </p>
+
+          <div className="case-meta-grid">
+            <div className="field">
+              <span className="field-label">Client</span>
+              <span className="field-value">Allstate</span>
+            </div>
+            <div className="field">
+              <span className="field-label">Role</span>
+              <span className="field-value">{w.role}</span>
+            </div>
+            <div className="field">
+              <span className="field-label">Surface</span>
+              <span className="field-value">{w.surface}</span>
+            </div>
+            <div className="field">
+              <span className="field-label">Years</span>
+              <span className="field-value">{w.years}</span>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <figure className="case-frame">
+            <img src={designAllstateScreens} alt="Allstate quote flow screens" />
+            <figcaption className="case-frame-caption">
+              <span>Fig. 04 · Quote flow — fixed-question / variable-input</span>
+              <span>Allstate · 2019—2021</span>
+            </figcaption>
+          </figure>
+        </Reveal>
+
+        <Reveal>
+          <ul className="metric-tiles">
+            <li>
+              <span className="metric-value">
+                <em>75%</em>
+              </span>
+              <span className="metric-label">Reduction in question count</span>
+              <span className="metric-detail">
+                For the standard 4-driver, 3-vehicle household.
+              </span>
+            </li>
+            <li>
+              <span className="metric-value">
+                <em>0%</em>
+              </span>
+              <span className="metric-label">Reduction in required data</span>
+              <span className="metric-detail">
+                Underwriting completeness preserved.
+              </span>
+            </li>
+            <li>
+              <span className="metric-value">
+                <em>72 → 18</em>
+              </span>
+              <span className="metric-label">Questions, before / after</span>
+              <span className="metric-detail">
+                Same data, restructured.
+              </span>
+            </li>
+            <li>
+              <span className="metric-value">
+                <em>1</em>
+              </span>
+              <span className="metric-label">Strategic redirect</span>
+              <span className="metric-detail">
+                Shifted org from "make it faster" to "make it scalable".
+              </span>
+            </li>
+          </ul>
+        </Reveal>
       </section>
 
-      <section className="metrics">
-        <h2>Quantifying the Impact</h2>
-        <p>Standard household: 4 drivers, 3 vehicles</p>
-        <table>
-          <thead>
-            <tr>
-              <th>Model</th>
-              <th>Drivers</th>
-              <th>Vehicles</th>
-              <th>Questions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Traditional</td>
-              <td>4</td>
-              <td>3</td>
-              <td>~72</td>
-            </tr>
-            <tr>
-              <td>Proposed</td>
-              <td>4</td>
-              <td>3</td>
-              <td>18</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          <strong>75%</strong> Reduction in question count
-        </p>
-        <p>
-          <strong>0%</strong> Reduction in required data
-        </p>
+      <section className="container">
+        <Reveal className="case-section">
+          <aside className="case-section-aside">
+            <span className="num">— 01</span>
+            <h3>The problem</h3>
+          </aside>
+          <div className="case-section-body">
+            <h4>The flow felt slow. The real issue was structural.</h4>
+            <p>
+              Early designs optimized for individual steps without grounding
+              the experience in how real households actually scale. Common
+              configurations were treated like edge cases. Question count
+              compounded — not because more data was being collected, but
+              because of how the flow was structured.
+            </p>
+            <ul className="triptych">
+              <li className="triptych-card">
+                <span className="triptych-card-num">— Issue 01</span>
+                <h5>No grounding in standard household size</h5>
+                <p>
+                  The flow wasn't designed around a typical household, so
+                  common scenarios behaved like exceptions.
+                </p>
+              </li>
+              <li className="triptych-card">
+                <span className="triptych-card-num">— Issue 02</span>
+                <h5>Questions repeated per driver, per vehicle</h5>
+                <p>
+                  Even when the data being collected was common across the
+                  household, the structure asked again, and again.
+                </p>
+              </li>
+              <li className="triptych-card">
+                <span className="triptych-card-num">— Issue 03</span>
+                <h5>No predictability in time-to-completion</h5>
+                <p>
+                  Users and agents had no clear sense of how long a quote
+                  would take as complexity increased.
+                </p>
+              </li>
+            </ul>
+
+            <div className="image-grid">
+              <figure>
+                <img src={designAllstateFlow} alt="One question, one driver" />
+                <figcaption>
+                  <span>1 question · 1 driver</span>
+                  <span>Manageable</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src={designAllstateFlow}
+                  alt="One question, four drivers, three vehicles"
+                />
+                <figcaption>
+                  <span>1 × 4 drivers × 3 vehicles</span>
+                  <span>~72 questions</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="case-section">
+          <aside className="case-section-aside">
+            <span className="num">— 02</span>
+            <h3>The constraints</h3>
+          </aside>
+          <div className="case-section-body">
+            <p>Any solution had to preserve:</p>
+            <ol className="steps">
+              <li>
+                <div>
+                  <h4>Regulatory compliance &amp; underwriting completeness</h4>
+                  <p>
+                    Removing questions or deferring data created downstream
+                    risk. The data couldn't change.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4>Agent defensibility &amp; existing data models</h4>
+                  <p>
+                    The back-end didn't move on this timeline. The structure
+                    had to.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h4>Fixed engineering scope &amp; agent operations</h4>
+                  <p>
+                    The change had to be deliverable, and shippable into the
+                    agent workflow without disruption.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </Reveal>
+
+        <Reveal className="case-section">
+          <aside className="case-section-aside">
+            <span className="num">— 03</span>
+            <h3>The insight</h3>
+          </aside>
+          <div className="case-section-body">
+            <blockquote className="pull">
+              Perceived effort is driven more by the number of questions than
+              the number of inputs. So change which dimension scales — not
+              what the system asks.
+              <cite>— Working principle</cite>
+            </blockquote>
+          </div>
+        </Reveal>
+
+        <Reveal className="case-section">
+          <aside className="case-section-aside">
+            <span className="num">— 04</span>
+            <h3>The proposal</h3>
+          </aside>
+          <div className="case-section-body">
+            <h4>Same data. Different structure.</h4>
+            <p>
+              <strong>Old model:</strong> Questions × Drivers × Vehicles.
+              <br />
+              <strong>Proposed:</strong> Fixed questions, variable driver
+              inputs.
+            </p>
+            <div className="image-grid">
+              <figure>
+                <img
+                  src={designAllstateCompare}
+                  alt="Before — driver-centric flow"
+                />
+                <figcaption>
+                  <span>Before · driver-centric</span>
+                  <span>Repeated per driver</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src={designAllstateCompare}
+                  alt="After — fixed-question / variable-input flow"
+                />
+                <figcaption>
+                  <span>After · fixed question, variable input</span>
+                  <span>1 question / many drivers</span>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="case-section">
+          <aside className="case-section-aside">
+            <span className="num">— 05</span>
+            <h3>The reframe</h3>
+          </aside>
+          <div className="case-section-body">
+            <p>
+              I escalated the structural finding to leadership before pursuing
+              implementation. The most valuable UX move on this project wasn't
+              an interface change — it was making the underlying constraint
+              visible to the people who could decide what to do about it.
+            </p>
+            <p>
+              That shifted the organizational conversation from{" "}
+              <em>"make it faster"</em> to{" "}
+              <em>"make it scalable"</em> — a different decision space, with
+              different downstream investment.
+            </p>
+            <p>
+              UX impact isn't always an interface change. Often, the highest
+              value is diagnosing where a system breaks and making that
+              constraint legible.
+            </p>
+          </div>
+        </Reveal>
       </section>
 
-      <section>
-        <h2>Organizational Reality</h2>
-        <p>
-          I recognized early that fully implementing this model would exceed the
-          original scope and require the help of many departments.
-        </p>
-        <p>
-          I escalated the structural findings to leadership to ensure shared
-          understanding and future planning around the real issue, not just
-          surface-level symptoms.
-        </p>
-        <p>
-          This shifted the conversation from "make it faster" to "make it
-          scalable."
-        </p>
-      </section>
-
-      <section>
-        <h2>Reflection</h2>
-        <p>
-          TL;DR: This work surfaced the structural constraint behind slow quote
-          times and enabled an informed tradeoff between self-serve completeness
-          and operational speed.
-        </p>
-        <p>
-          UX impact isn't always an interface change. Often, the highest value
-          is diagnosing where a system breaks and making that constraint visible
-          so the organization can decide how to respond.
-        </p>
-        <p>
-          Here, the work showed that quote delays were driven by upstream data
-          modeling and sequencing, not UI execution. The organization ultimately
-          prioritized conversion by collecting less data in the self-serve flow
-          and adjusting risk levels. Given the constraints and business goals,
-          this was a pragmatic decision.
-        </p>
-      </section>
+      <KindredWork fromId={w.id} />
     </article>
   );
 };
