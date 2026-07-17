@@ -26,7 +26,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(244, 241, 234, 0.65);
+  background: color-mix(in srgb, var(--paper) 65%, transparent);
   backdrop-filter: saturate(140%) blur(12px);
   -webkit-backdrop-filter: saturate(140%) blur(12px);
   border-bottom: 1px solid transparent;
@@ -36,7 +36,7 @@
 }
 
 .site-header.is-scrolled {
-  background: rgba(244, 241, 234, 0.88);
+  background: color-mix(in srgb, var(--paper) 88%, transparent);
   border-bottom-color: var(--rule);
 }
 
@@ -74,8 +74,8 @@
 
 .monogram:hover .monogram-mark {
   transform: rotate(-12deg);
-  background: var(--ink);
-  color: var(--paper-light);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
 }
 
 .monogram-text {
@@ -107,7 +107,7 @@
   padding: 4px;
   border: 1px solid var(--rule);
   border-radius: 999px;
-  background: rgba(255, 252, 246, 0.7);
+  background: color-mix(in srgb, var(--paper-light) 70%, transparent);
 }
 
 .site-nav a {
@@ -129,8 +129,8 @@
 }
 
 .site-nav a.is-active {
-  background: var(--ink);
-  color: var(--paper-light);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
 }
 
 .site-nav a.is-active .nav-index {
@@ -149,7 +149,67 @@
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: var(--paper-light);
+  color: var(--ink);
+  padding: 0;
+  transition:
+    background 0.4s var(--ease),
+    color 0.4s var(--ease),
+    border-color 0.4s var(--ease),
+    transform 0.3s var(--ease);
+}
+
+.theme-toggle:hover {
+  background: var(--chip-bg);
+  color: var(--chip-fg);
+  border-color: var(--chip-bg);
+  transform: rotate(-12deg);
+}
+
+.theme-toggle-glyph {
+  position: relative;
+  display: inline-flex;
+  width: 15px;
+  height: 15px;
+}
+
+.theme-toggle-glyph svg {
+  position: absolute;
+  inset: 0;
+  transition:
+    opacity 0.4s var(--ease),
+    transform 0.5s var(--ease);
+}
+
+.icon-sun {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.icon-moon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.6);
+}
+
+:root[data-theme="dark"] .icon-sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.6);
+}
+
+:root[data-theme="dark"] .icon-moon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 .status-dot {
@@ -526,7 +586,7 @@
   right: 0;
   top: 0;
   bottom: 0;
-  background: var(--ink);
+  background: var(--chip-bg);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform 0.6s var(--ease);
@@ -538,7 +598,7 @@
 }
 
 .index-row:hover {
-  color: var(--paper-light);
+  color: var(--chip-fg);
   padding-left: 18px;
   padding-right: 18px;
 }
@@ -583,7 +643,7 @@
 }
 
 .index-row:hover .row-discipline {
-  color: var(--mist);
+  color: var(--chip-muted);
 }
 
 .index-row .row-title {
@@ -607,7 +667,7 @@
 }
 
 .index-row:hover .row-years {
-  color: var(--mist);
+  color: var(--chip-muted);
 }
 
 .index-row .row-arrow {
@@ -630,7 +690,7 @@
 .index-row:hover .row-arrow {
   background: var(--ember);
   border-color: var(--ember);
-  color: var(--paper-light);
+  color: var(--chip-fg);
   transform: rotate(-45deg) translate(2px, 0);
 }
 
@@ -805,8 +865,8 @@
 .cta-band {
   margin-block: var(--s-9);
   padding: clamp(40px, 6vw, 96px);
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -833,7 +893,7 @@
 }
 
 .cta-band h2 {
-  color: var(--paper-light);
+  color: var(--chip-fg);
   font-size: clamp(36px, 5vw, 72px);
   letter-spacing: -0.02em;
 }
@@ -843,22 +903,22 @@
 }
 
 .cta-band p {
-  color: var(--mist);
+  color: var(--chip-muted);
   font-size: 16px;
   max-width: 38ch;
   margin-bottom: var(--s-5);
 }
 
 .cta-band .cta {
-  background: var(--paper-light);
-  color: var(--ink);
-  border-color: var(--paper-light);
+  background: var(--chip-fg);
+  color: var(--chip-bg);
+  border-color: var(--chip-fg);
 }
 
 .cta-band .cta:hover {
   background: var(--ember);
   border-color: var(--ember);
-  color: var(--paper-light);
+  color: var(--chip-fg);
 }
 
 @media (max-width: 880px) {

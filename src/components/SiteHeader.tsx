@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const SiteHeader = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -96,12 +97,13 @@ const SiteHeader = () => {
           </NavLink>
         </nav>
 
-        <div className="site-meta" aria-hidden="true">
-          <span className="status-dot" />
-          <span className="meta-text">
+        <div className="site-meta">
+          <span className="status-dot" aria-hidden="true" />
+          <span className="meta-text" aria-hidden="true">
             <span className="meta-line">Chicago · {time || "—"} CT</span>
             <span className="meta-line meta-faded">{subtitle}</span>
           </span>
+          <ThemeToggle />
         </div>
       </div>
     </header>

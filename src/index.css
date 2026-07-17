@@ -19,6 +19,13 @@
   --ember-tint: rgba(184, 72, 43, 0.08);
   --ember-glow: rgba(184, 72, 43, 0.18);
 
+  /* Chip tokens — for elements that invert fg/bg (buttons, active nav, hover
+     fills). Kept separate from --ink/--paper so dark mode can flip these to a
+     "light poster" fill without breaking normal text contrast. */
+  --chip-bg: var(--ink);
+  --chip-fg: var(--paper-light);
+  --chip-muted: var(--mist);
+
   /* Typography */
   --serif:
     "Instrument Serif", "Cormorant Garamond", "Times New Roman", Georgia, serif;
@@ -55,6 +62,37 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: -0.005em;
+}
+
+/* Dark theme — same warm editorial-engineering palette, inverted.
+   Toggled via [data-theme] on <html>, set before first paint (see index.html)
+   to avoid a flash of the wrong theme. */
+:root[data-theme="dark"] {
+  --paper: #15130f;
+  --paper-deep: #0b0a07;
+  --paper-light: #211d17;
+  --ink: #f1ece1;
+  --ink-soft: #c7bda9;
+  --graphite: #8f8573;
+  --mist: #5f5748;
+  --rule: #322c22;
+  --rule-soft: #241f18;
+  --ember: #e2703f;
+  --ember-deep: #c85a30;
+  --ember-tint: rgba(226, 112, 63, 0.14);
+  --ember-glow: rgba(226, 112, 63, 0.24);
+
+  --chip-bg: #f1ece1;
+  --chip-fg: #15130f;
+  --chip-muted: #6b6357;
+
+  color-scheme: dark;
+}
+
+:root[data-theme="dark"] body::before {
+  opacity: 0.16;
+  background-image: url("data:image/svg+xml;utf8,<svg width='32' height='32' xmlns='http://www.w3.org/2000/svg'><path d='M 32 0 L 0 0 0 32' fill='none' stroke='%23f1ece1' stroke-width='0.5'/></svg>");
+  mix-blend-mode: screen;
 }
 
 * {
@@ -301,14 +339,14 @@ button {
   align-items: center;
   gap: 12px;
   padding: 14px 22px;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
   font-family: var(--sans);
   font-size: 13.5px;
   font-weight: 500;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--chip-bg);
   border-radius: 999px;
   cursor: pointer;
   transition:
@@ -320,7 +358,7 @@ button {
 .cta:hover {
   background: var(--ember);
   border-color: var(--ember);
-  color: var(--paper-light);
+  color: var(--chip-fg);
 }
 
 .cta-arrow {
@@ -350,8 +388,8 @@ button {
 }
 
 .cta-ghost:hover {
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
 }
 
 /* ---------- Reveal animation ---------- */
@@ -495,8 +533,8 @@ label {
   position: fixed;
   top: -40px;
   left: 16px;
-  background: var(--ink);
-  color: var(--paper);
+  background: var(--chip-bg);
+  color: var(--chip-fg);
   padding: 8px 14px;
   border-radius: 4px;
   z-index: 10000;
