@@ -30,9 +30,9 @@ const DesignAllstate = () => {
             <em>multi-driver</em> quote flow.
           </h1>
           <p className="lead">
-            The quote flow felt slow. The real issue was structural —
-            questions multiplying across drivers and vehicles. I changed which
-            dimension scaled, not what the system asked.
+            The quote flow felt slow. The real issue was structural: questions
+            multiplying across drivers and vehicles. I changed which dimension
+            scaled, not what the system asked.
           </p>
 
           <div className="case-meta-grid">
@@ -57,9 +57,14 @@ const DesignAllstate = () => {
 
         <Reveal>
           <figure className="case-frame">
-            <img src={designAllstateScreens} alt="Allstate quote flow screens" />
+            <img
+              src={designAllstateScreens}
+              alt="Allstate quote flow screens"
+            />
             <figcaption className="case-frame-caption">
-              <span>Fig. 04 · Quote flow — fixed-question / variable-input</span>
+              <span>
+                Fig. 04 · Quote flow — fixed-question / variable-input
+              </span>
               <span>Allstate · 2019—2021</span>
             </figcaption>
           </figure>
@@ -90,9 +95,7 @@ const DesignAllstate = () => {
                 <em>72 → 18</em>
               </span>
               <span className="metric-label">Questions, before / after</span>
-              <span className="metric-detail">
-                Same data, restructured.
-              </span>
+              <span className="metric-detail">Same data, restructured.</span>
             </li>
             <li>
               <span className="metric-value">
@@ -116,19 +119,19 @@ const DesignAllstate = () => {
           <div className="case-section-body">
             <h4>The flow felt slow. The real issue was structural.</h4>
             <p>
-              Early designs optimized for individual steps without grounding
-              the experience in how real households actually scale. Common
+              Early designs optimized for individual steps without grounding the
+              experience in how real households actually scale. Common
               configurations were treated like edge cases. Question count
-              compounded — not because more data was being collected, but
-              because of how the flow was structured.
+              compounded, not because more data was being collected, but because
+              of how the flow was structured.
             </p>
             <ul className="triptych">
               <li className="triptych-card">
                 <span className="triptych-card-num">— Issue 01</span>
                 <h5>No grounding in standard household size</h5>
                 <p>
-                  The flow wasn't designed around a typical household, so
-                  common scenarios behaved like exceptions.
+                  The flow wasn't designed around a typical household, so common
+                  scenarios behaved like exceptions.
                 </p>
               </li>
               <li className="triptych-card">
@@ -143,31 +146,50 @@ const DesignAllstate = () => {
                 <span className="triptych-card-num">— Issue 03</span>
                 <h5>No predictability in time-to-completion</h5>
                 <p>
-                  Users and agents had no clear sense of how long a quote
-                  would take as complexity increased.
+                  Users and agents had no clear sense of how long a quote would
+                  take as complexity increased.
                 </p>
               </li>
             </ul>
 
-            <div className="image-grid">
+            <div className="image-grid image-grid-collapse-bottom">
               <figure>
                 <img src={designAllstateFlow} alt="One question, one driver" />
                 <figcaption>
-                  <span>1 question · 1 driver</span>
-                  <span>Manageable</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={designAllstateFlow}
-                  alt="One question, four drivers, three vehicles"
-                />
-                <figcaption>
-                  <span>1 × 4 drivers × 3 vehicles</span>
-                  <span>~72 questions</span>
+                  <span>1 question × 1 driver × 1 vehicle</span>
+                  <span>Acceptable</span>
                 </figcaption>
               </figure>
             </div>
+            <figure className="image-grid-4">
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <figcaption>
+                {/* <span>1 question · 1 driver</span> */}
+                <span>1 question × 4 drivers × 1 vehicle</span>
+                <span>Manageable</span>
+              </figcaption>
+            </figure>
+            <figure className="image-grid-4">
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <img src={designAllstateFlow} alt="One question, one driver" />
+              <figcaption>
+                <span>1 question × 4 drivers × 3 vehicles</span>
+                <span>Untenable</span>
+              </figcaption>
+            </figure>
           </div>
         </Reveal>
 
@@ -192,8 +214,8 @@ const DesignAllstate = () => {
                 <div>
                   <h4>Agent defensibility &amp; existing data models</h4>
                   <p>
-                    The back-end didn't move on this timeline. The structure
-                    had to.
+                    The back-end didn't move on this timeline. The structure had
+                    to.
                   </p>
                 </div>
               </li>
@@ -218,8 +240,8 @@ const DesignAllstate = () => {
           <div className="case-section-body">
             <blockquote className="pull">
               Perceived effort is driven more by the number of questions than
-              the number of inputs. So change which dimension scales — not
-              what the system asks.
+              the number of inputs. So change which dimension scales, not what
+              the system asks.
               <cite>— Working principle</cite>
             </blockquote>
           </div>
@@ -242,16 +264,6 @@ const DesignAllstate = () => {
               <figure>
                 <img
                   src={designAllstateCompare}
-                  alt="Before — driver-centric flow"
-                />
-                <figcaption>
-                  <span>Before · driver-centric</span>
-                  <span>Repeated per driver</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={designAllstateCompare}
                   alt="After — fixed-question / variable-input flow"
                 />
                 <figcaption>
@@ -260,6 +272,24 @@ const DesignAllstate = () => {
                 </figcaption>
               </figure>
             </div>
+            <figure className="image-grid-3">
+              <img
+                src={designAllstateCompare}
+                alt="After — fixed-question / variable-input flow"
+              />
+              <img
+                src={designAllstateCompare}
+                alt="After — fixed-question / variable-input flow"
+              />
+              <img
+                src={designAllstateCompare}
+                alt="After — fixed-question / variable-input flow"
+              />
+              <figcaption>
+                <span>1 question × 4 drivers × 3 vehicles</span>
+                <span>Manageable</span>
+              </figcaption>
+            </figure>
           </div>
         </Reveal>
 
@@ -272,14 +302,13 @@ const DesignAllstate = () => {
             <p>
               I escalated the structural finding to leadership before pursuing
               implementation. The most valuable UX move on this project wasn't
-              an interface change — it was making the underlying constraint
+              an interface change; it was making the underlying constraint
               visible to the people who could decide what to do about it.
             </p>
             <p>
               That shifted the organizational conversation from{" "}
-              <em>"make it faster"</em> to{" "}
-              <em>"make it scalable"</em> — a different decision space, with
-              different downstream investment.
+              <em>"make it faster"</em> to <em>"make it scalable"</em>, a
+              different decision space, with different downstream investment.
             </p>
             <p>
               UX impact isn't always an interface change. Often, the highest

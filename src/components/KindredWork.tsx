@@ -17,7 +17,7 @@ const KindredWork = ({ fromId }: Props) => {
             <span className="italic">Work that</span> rhymes with this.
           </h3>
           <p className="caption">
-            Two adjacent case studies — one from the same company, one sharing
+            Two adjacent case studies, one from the same company, one sharing
             the same way of seeing.
           </p>
         </div>

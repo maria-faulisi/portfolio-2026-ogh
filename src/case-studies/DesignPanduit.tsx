@@ -78,7 +78,7 @@ const DesignPanduit = () => {
               expect enterprise tools to behave.
             </h4>
             <p>
-              The frontend dated back to early web patterns — over twenty
+              The frontend dated back to early web patterns, over twenty
               years old. Functional, but increasingly misaligned with modern
               expectations. Dated interaction patterns introduced confusion
               and cognitive overhead, especially for newer users.
@@ -89,7 +89,7 @@ const DesignPanduit = () => {
                 <h5>Validation lagged input</h5>
                 <p>
                   Errors appeared after submission, not during input. The
-                  portal didn't help users avoid mistakes — it scored them.
+                  portal didn't help users avoid mistakes; it scored them.
                 </p>
               </li>
               <li className="triptych-card">
@@ -109,10 +109,7 @@ const DesignPanduit = () => {
                 </p>
               </li>
             </ul>
-            <figure
-              className="case-frame"
-              style={{ aspectRatio: "16 / 7", marginTop: 24 }}
-            >
+            <figure className="case-frame" style={{ marginTop: 24 }}>
               <img src={designPanduitScreens} alt="Legacy portal screens" />
               <figcaption className="case-frame-caption">
                 <span>Legacy portal — selected screens</span>
@@ -143,7 +140,7 @@ const DesignPanduit = () => {
                   <h4>Parallel platform work &amp; compressed timeline</h4>
                   <p>
                     Other teams were rebuilding around us. We had to ship in a
-                    way they could integrate with — not against.
+                    way they could integrate with, not against.
                   </p>
                 </div>
               </li>
@@ -184,7 +181,7 @@ const DesignPanduit = () => {
             <p>
               Modernized the portal experience inside the existing technical
               infrastructure. Task-based navigation, reusable components, and
-              predictable patterns replaced dated workflows — all without
+              predictable patterns replaced dated workflows, all without
               touching backend APIs.
             </p>
             <div className="image-grid">
@@ -256,7 +253,7 @@ const DesignPanduit = () => {
                   <h4>Validation within constraints</h4>
                   <p>
                     Research that validated user value <em>and</em> technical
-                    feasibility — so we built only what mattered and what
+                    feasibility, so we built only what mattered and what
                     could ship.
                   </p>
                 </div>
@@ -292,7 +289,7 @@ const DesignPanduit = () => {
             <p>
               The system created a shared vocabulary between design and
               engineering. Error handling became proactive rather than
-              reactive. Edge cases were addressed during design — not
+              reactive. Edge cases were addressed during design, not
               discovered in production.
             </p>
             <h4>Users responded positively.</h4>

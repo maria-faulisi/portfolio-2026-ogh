@@ -31,7 +31,7 @@ const DesignSystemsAllstate = () => {
             and handoffs.
           </h1>
           <p className="lead">
-            Allstate's enterprise design system — Mesh — was fragmented across
+            Allstate's enterprise design system, Mesh, was fragmented across
             three tools that had quietly drifted out of sync. I tightened the
             contracts between them so 40+ teams stayed aligned from Sketch to
             code.
@@ -117,7 +117,7 @@ const DesignSystemsAllstate = () => {
               new features.
             </h4>
             <p>
-              Mesh — Allstate's enterprise design system — had grown across
+              Mesh, Allstate's enterprise design system, had grown across
               three tools. Over time, each had drifted out of sync. Component
               names, spacing tokens, and accessibility specs varied between
               environments. Designers referenced outdated Zeplin exports;
@@ -129,7 +129,12 @@ const DesignSystemsAllstate = () => {
                 <img
                   src={dsAllstateDiagram}
                   alt=""
-                  style={{ width: 36, height: 36, opacity: 0.7 }}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    objectFit: "contain",
+                    opacity: 0.7,
+                  }}
                 />
                 <h5>Sketch — Design</h5>
                 <p>
@@ -142,7 +147,12 @@ const DesignSystemsAllstate = () => {
                 <img
                   src={dsAllstateIcon}
                   alt=""
-                  style={{ width: 36, height: 36, opacity: 0.7 }}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    objectFit: "contain",
+                    opacity: 0.7,
+                  }}
                 />
                 <h5>Zeplin — Handoff</h5>
                 <p>
@@ -155,7 +165,12 @@ const DesignSystemsAllstate = () => {
                 <img
                   src={dsAllstateChart}
                   alt=""
-                  style={{ width: 36, height: 36, opacity: 0.7 }}
+                  style={{
+                    width: 36,
+                    height: 36,
+                    objectFit: "contain",
+                    opacity: 0.7,
+                  }}
                 />
                 <h5>Styleguidist — Code</h5>
                 <p>
@@ -191,7 +206,7 @@ const DesignSystemsAllstate = () => {
                   <p>
                     Co-led the migration from legacy SASS to Emotion.js. This
                     enabled token-based theming, improved accessibility, and
-                    consistent responsiveness — and made future drift visible
+                    consistent responsiveness, and made future drift visible
                     instead of silent.
                   </p>
                 </div>
@@ -239,7 +254,7 @@ const DesignSystemsAllstate = () => {
           <div className="case-section-body">
             <blockquote className="pull">
               "The drift didn't live inside the tools. It lived in the spaces
-              between them — and that's where the work was."
+              between them, and that's where the work was."
               <cite>— Internal note, Q3 2019</cite>
             </blockquote>
             <p>
@@ -262,7 +277,7 @@ const DesignSystemsAllstate = () => {
                 <div>
                   <h4>Real parity lives between tools, not inside them.</h4>
                   <p>
-                    Audit the seams — handoff, conversion, naming — before
+                    Audit the seams (handoff, conversion, naming) before
                     you audit any single artifact.
                   </p>
                 </div>
@@ -280,7 +295,7 @@ const DesignSystemsAllstate = () => {
                 <div>
                   <h4>A system is only as valuable as its adoption.</h4>
                   <p>
-                    By design, research, and engineering — alike. Anything
+                    By design, research, and engineering, alike. Anything
                     less is a library, not a system.
                   </p>
                 </div>

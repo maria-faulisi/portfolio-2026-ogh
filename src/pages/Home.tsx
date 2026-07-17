@@ -10,7 +10,7 @@ const Home = () => {
           <div className="hero-stamp">
             <span>Vol. VI · Issue 02</span>
             <span className="hero-stamp-rule" />
-            <span>Selected works · 2016—2026</span>
+            <span>Selected works · 20162026</span>
           </div>
 
           <h1 className="hero-display">
@@ -37,8 +37,8 @@ const Home = () => {
               <p className="eyebrow">Practice</p>
               <p className="lead-line">
                 A decade of UX architecture and design-systems work for SaaS
-                platforms and Fortune 500s — paired with the engineering taste
-                to ship it.
+                platforms and Fortune 500s paired with the engineering taste to
+                ship it.
               </p>
             </div>
             <div className="hero-meta-block">
@@ -107,7 +107,7 @@ const Home = () => {
         <Reveal>
           <div className="section-head">
             <div>
-              <p className="eyebrow">§ Index — Selected Works</p>
+              <p className="eyebrow">§ Index Selected Works</p>
               <h2 className="serif">
                 Six case studies.
                 <span className="serif italic"> Two disciplines.</span>
@@ -127,7 +127,7 @@ const Home = () => {
             return (
               <Reveal key={id} delay={i * 60} as="li">
                 <Link to={w.href} className="index-row">
-                  <span className="row-num">— {w.index}</span>
+                  <span className="row-num"> {w.index}</span>
                   <span className="row-company">
                     <span className="company-name">{w.company}</span>
                     <span className="row-discipline">{w.discipline}</span>
@@ -156,7 +156,7 @@ const Home = () => {
             </h3>
             <span className="ember-rule" aria-hidden="true" />
             <p className="caption">
-              Four operating principles I've earned the hard way — and that show
+              Four operating principles I've earned the hard way, and that show
               up in every case study below.
             </p>
           </Reveal>
@@ -171,7 +171,7 @@ const Home = () => {
               {
                 num: "02",
                 title: "Adoption is the only governance that scales.",
-                body: "Mandates are expensive. Make the right thing the easiest thing — through tooling, examples, and lint — and a system stops needing to be policed.",
+                body: "Mandates are expensive. Make the right thing the easiest thing, through tooling, examples, and lint, and a system stops needing to be policed.",
               },
               {
                 num: "03",
@@ -181,7 +181,7 @@ const Home = () => {
               {
                 num: "04",
                 title: "Use AI like a junior partner with great taste.",
-                body: "I lean into LLMs for grunt work, exploration, and edge-case discovery — without outsourcing taste or judgment. The craft is still mine.",
+                body: "I lean into LLMs for grunt work, exploration, and edge-case discovery  without outsourcing taste or judgment. The craft is still mine.",
               },
             ].map((item, i) => (
               <Reveal
@@ -190,7 +190,7 @@ const Home = () => {
                 as="li"
                 className="manifesto-item"
               >
-                <span className="num">— {item.num}</span>
+                <span className="num"> {item.num}</span>
                 <div>
                   <h4>{item.title}</h4>
                   <p>{item.body}</p>

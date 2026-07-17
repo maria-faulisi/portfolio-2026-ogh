@@ -35,9 +35,9 @@ const DesignHarvest = () => {
             <em>report</em> workflows.
           </h1>
           <p className="lead">
-            Two reporting flows had quietly grown into one user intent. I
-            framed the duplication, proposed a unified path, and helped the
-            team ship without expanding scope.
+            Two reporting flows had quietly grown into one user intent. I framed
+            the duplication, proposed a unified path, and helped the team ship
+            without expanding scope.
           </p>
 
           <div className="case-meta-grid">
@@ -86,74 +86,59 @@ const DesignHarvest = () => {
               added recurring exports — emails delivered on a cadence, with
               reports stored in Harvest. Under delivery pressure, the initial
               direction treated recurring exports as a separate flow that
-              mirrored the saved-report experience, with extra config bolted
-              on top.
+              mirrored the saved-report experience, with extra config bolted on
+              top.
             </p>
             <ul className="triptych">
               <li className="triptych-card">
                 <span className="triptych-card-num">— Effect 01</span>
                 <h5>Duplicated setup for users</h5>
                 <p>
-                  The same report had to be configured more than once to
-                  save it and schedule it.
+                  The same report had to be configured more than once to save it
+                  and schedule it.
                 </p>
               </li>
               <li className="triptych-card">
                 <span className="triptych-card-num">— Effect 02</span>
                 <h5>Parallel logic for engineering</h5>
                 <p>
-                  Nearly identical behavior was implemented and maintained
-                  in separate paths.
+                  Nearly identical behavior was implemented and maintained in
+                  separate paths.
                 </p>
               </li>
               <li className="triptych-card">
                 <span className="triptych-card-num">— Effect 03</span>
                 <h5>Mismatched mental models</h5>
                 <p>
-                  Users were forced to learn an internal distinction that
-                  didn't map to how they thought about reporting.
+                  Users were forced to learn an internal distinction that didn't
+                  map to how they thought about reporting.
                 </p>
               </li>
             </ul>
 
             <h4 style={{ marginTop: 24 }}>Initial design — parallel flows</h4>
-            <div className="image-grid">
-              <figure>
-                <img src={designHarvest01} alt="Run report" />
-                <figcaption>
-                  <span>Run report</span>
-                  <span>Save path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img src={designHarvest02} alt="Save report" />
-                <figcaption>
-                  <span>Save report</span>
-                  <span>Save path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img src={designHarvest03} alt="Saved report list" />
-                <figcaption>
-                  <span>Saved report list</span>
-                  <span>Save path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img src={designHarvest04} alt="Create recurring report" />
-                <figcaption>
-                  <span>Create recurring report</span>
-                  <span>Schedule path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img src={designHarvest05} alt="Recurring report list" />
-                <figcaption>
-                  <span>Recurring report list</span>
-                  <span>Schedule path</span>
-                </figcaption>
-              </figure>
-            </div>
+            <figure className="image-grid-3">
+              <img src={designHarvest01} alt="Run report" />
+              <img src={designHarvest02} alt="Save report" />
+              <img src={designHarvest03} alt="Saved report list" />
+              <figcaption>
+                <span>
+                  Run report • Create saved report • Saved report list
+                </span>
+                <span>Save path</span>
+              </figcaption>
+            </figure>
+            <figure className="image-grid-3">
+              <img src={designHarvest01} alt="Run report" />
+              <img src={designHarvest04} alt="Create recurring report" />
+              <img src={designHarvest05} alt="Recurring report list" />
+              <figcaption>
+                <span>
+                  Run report • Create recurring Report • Recurring report list
+                </span>
+                <span>Recurring path</span>
+              </figcaption>
+            </figure>
           </div>
         </Reveal>
 
@@ -164,8 +149,8 @@ const DesignHarvest = () => {
           </aside>
           <div className="case-section-body">
             <blockquote className="pull">
-              Saving and scheduling are the same intent — define a report
-              once, then choose how it's delivered.
+              Saving and scheduling are the same intent: define a report once,
+              then choose how it's delivered.
               <cite>— Reframe of the brief</cite>
             </blockquote>
           </div>
@@ -182,32 +167,18 @@ const DesignHarvest = () => {
               Same configuration object. Same list. Save once, then optionally
               schedule from the same place.
             </p>
-            <div className="image-grid">
-              <figure>
-                <img src={designHarvest06} alt="Run report — unified flow" />
-                <figcaption>
-                  <span>Run report</span>
-                  <span>Unified path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img
-                  src={designHarvest07}
-                  alt="Save report with recurring options"
-                />
-                <figcaption>
-                  <span>Save with recurring options</span>
-                  <span>Unified path</span>
-                </figcaption>
-              </figure>
-              <figure>
-                <img src={designHarvest08} alt="Saved report — edit recurring" />
-                <figcaption>
-                  <span>Edit recurring on a saved report</span>
-                  <span>Unified path</span>
-                </figcaption>
-              </figure>
-            </div>
+            <figure className="image-grid-3">
+              <img src={designHarvest06} alt="Run report — unified flow" />
+              <img
+                src={designHarvest07}
+                alt="Save report with recurring options"
+              />
+              <img src={designHarvest08} alt="Saved report — edit recurring" />
+              <figcaption>
+                <span>Save with recurring options</span>
+                <span>Unified path</span>
+              </figcaption>
+            </figure>
           </div>
         </Reveal>
 
@@ -219,7 +190,7 @@ const DesignHarvest = () => {
           <div className="case-section-body">
             <p>
               My title on the project was software engineer. The decision point
-              wasn't purely technical, though — it was about how the workflow
+              wasn't purely technical, though; it was about how the workflow
               would scale, for users and for the codebase.
             </p>
             <p>Rather than raising concerns in the abstract, I:</p>
@@ -229,7 +200,7 @@ const DesignHarvest = () => {
                   <h4>Framed the issue in user mental models</h4>
                   <p>
                     Not implementation details. The duplication wasn't an
-                    engineering smell — it was a UX one.
+                    engineering smell; it was a UX one.
                   </p>
                 </div>
               </li>
@@ -263,7 +234,7 @@ const DesignHarvest = () => {
             <p>
               A hybrid background brings a responsibility to speak up,
               regardless of title. In this case, my engineering context made an
-              opportunity legible — and pairing the critique with a viable
+              opportunity legible, and pairing the critique with a viable
               alternative meant the team could adjust without delaying delivery
               or increasing risk.
             </p>

@@ -17,10 +17,10 @@ const About = () => {
         <div className="about-grid">
           <Reveal className="about-prose">
             <p>
-              I'm Maria — a design engineer who built a career in the seam
+              I'm Maria, a design engineer who built a career in the seam
               between UX architecture and front-end engineering. I've shipped
               systems and products at <strong>SaaS companies</strong> and{" "}
-              <strong>Fortune 500s</strong> — the kind of organizations where a
+              <strong>Fortune 500s</strong>, the kind of organizations where a
               well-named token saves a quarter of meetings.
             </p>
             <p>
@@ -28,29 +28,36 @@ const About = () => {
               budget for: <em>contracts between tools</em>, governance that
               scales with adoption, the boring naming work that quietly raises
               everyone's velocity. Three of the case studies here are design
-              systems I led. Three are product re-architectures where the
-              system was already in place and the work was about reducing
-              structural complexity.
+              systems I led. Three are product re-architectures where the system
+              was already in place and the work was about reducing structural
+              complexity.
             </p>
             <p>
               I write production React and TypeScript, run my own design tokens,
               and I'm fluent enough in the engineering side to make decisions
               that don't have to be re-litigated downstream. I lean on AI tools
-              the way a senior partner leans on a junior — for exploration,
-              grunt work, edge-case discovery — without ever outsourcing taste
-              or the craft.
+              the way a senior partner leans on a junior, for exploration, grunt
+              work, edge-case discovery, without ever outsourcing taste or the
+              craft.
             </p>
             <p>
-              Outside of work I'm a runner, a stubborn home cook, and an
-              ongoing student of typography and printed matter. I live in
-              Chicago.
+              Outside of work I'm a dog mom, an unrepentant plant hoarder, and
+              an ongoing student of making things with my hands. I live outside
+              of Chicago in Naperville, IL.
             </p>
           </Reveal>
 
           <aside className="about-aside">
             <Reveal className="about-card">
               <p className="eyebrow">Currently</p>
-              <p style={{ fontFamily: "var(--serif)", fontSize: 22, fontStyle: "italic", color: "var(--ink)" }}>
+              <p
+                style={{
+                  fontFamily: "var(--serif)",
+                  fontSize: 22,
+                  fontStyle: "italic",
+                  color: "var(--ink)",
+                }}
+              >
                 Open to senior IC roles &amp; design-engineering leadership.
               </p>
               <Link className="link" to="/contact">
@@ -59,7 +66,7 @@ const About = () => {
             </Reveal>
 
             <Reveal delay={80} className="about-card">
-              <p className="eyebrow">Selected Clients</p>
+              <p className="eyebrow">Relevant History</p>
               <ul className="about-card-list">
                 <li>
                   <span>Allstate</span>
@@ -73,27 +80,23 @@ const About = () => {
                   <span>Panduit</span>
                   <span className="right">2016 — 2018</span>
                 </li>
-                <li>
-                  <span>+ undisclosed</span>
-                  <span className="right">SaaS · Fintech</span>
-                </li>
               </ul>
             </Reveal>
 
             <Reveal delay={140} className="about-card">
-              <p className="eyebrow">Recognition</p>
+              <p className="eyebrow">Off the Clock</p>
               <ul className="about-card-list">
                 <li>
-                  <span>Featured speaker · Clarity Conf</span>
-                  <span className="right">2022</span>
+                  <span>Learning to knit</span>
+                  <span className="right">Basics, so far</span>
                 </li>
                 <li>
-                  <span>Internal patents · Sketch automation</span>
-                  <span className="right">2020</span>
+                  <span>Murder mystery novels</span>
+                  <span className="right">One a month</span>
                 </li>
                 <li>
-                  <span>OSS contributor · Token interop</span>
-                  <span className="right">Ongoing</span>
+                  <span>Scotland</span>
+                  <span className="right">Annual pilgrimage</span>
                 </li>
               </ul>
             </Reveal>
@@ -143,22 +146,24 @@ const About = () => {
             <p className="eyebrow">Method</p>
             <h4 className="serif">How I move through a problem</h4>
             <ul>
-              <li>Audit before authoring — always</li>
+              <li>Audit before authoring, always</li>
               <li>Reduce structure before reducing chrome</li>
               <li>Make the right thing the easy thing</li>
-              <li>Write the docs first; they reveal the design</li>
+              <li>
+                Start with the semantic element; it already knows the design
+              </li>
               <li>Ship a slim end-to-end before a fat anything</li>
             </ul>
           </Reveal>
           <Reveal delay={200} className="discipline">
-            <p className="eyebrow">Sensibility</p>
-            <h4 className="serif">Taste, in working order</h4>
+            <p className="eyebrow">Judgment</p>
+            <h4 className="serif">Calls that hold up downstream</h4>
             <ul>
-              <li>Editorial typography &amp; printed-matter discipline</li>
-              <li>Quiet motion, generous negative space</li>
-              <li>Numbers as design objects, not decoration</li>
-              <li>One accent color, used sparingly, never twice</li>
-              <li>Tooling that disappears when used right</li>
+              <li>Parity between Figma and code, not just resemblance</li>
+              <li>One name, one meaning, in every tool it lives in</li>
+              <li>The system as the path of least resistance</li>
+              <li>Success measured in reuse, not requirement</li>
+              <li>Built to enable, not to police</li>
             </ul>
           </Reveal>
         </div>

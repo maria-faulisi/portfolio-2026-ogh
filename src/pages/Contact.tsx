@@ -36,7 +36,13 @@ const Contact = () => {
               <div className="row">
                 <div>
                   <label htmlFor="name">Your name</label>
-                  <input id="name" name="name" type="text" autoComplete="name" required />
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    autoComplete="name"
+                    required
+                  />
                 </div>
                 <div>
                   <label htmlFor="company">Company / context</label>
@@ -59,7 +65,9 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message">A few sentences about what you're holding</label>
+                <label htmlFor="message">
+                  A few sentences about what you're holding
+                </label>
                 <textarea id="message" name="message" rows={5} required />
               </div>
               <div style={{ display: "flex", gap: 16, alignItems: "center" }}>
@@ -89,7 +97,7 @@ const Contact = () => {
               <p className="caption">Replies within 1—2 business days.</p>
             </div>
 
-            <div className="contact-detail">
+            {/* <div className="contact-detail">
               <p className="eyebrow">Calendar</p>
               <p className="value">
                 <a
@@ -103,7 +111,7 @@ const Contact = () => {
               <p className="caption">
                 Bring the messy part. I'll bring questions.
               </p>
-            </div>
+            </div> */}
 
             <div className="contact-detail">
               <p className="eyebrow">Code & Notes</p>

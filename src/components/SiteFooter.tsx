@@ -24,7 +24,7 @@ const SiteFooter = () => {
                 ↗
               </span>
             </a>
-            <a
+            {/* <a
               className="footer-link"
               href="https://cal.com/mariafaulisi"
               target="_blank"
@@ -34,7 +34,7 @@ const SiteFooter = () => {
               <span className="footer-link-arrow" aria-hidden="true">
                 ↗
               </span>
-            </a>
+            </a> */}
           </div>
           <div className="footer-col">
             <p className="eyebrow">Elsewhere</p>
