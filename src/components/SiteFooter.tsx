@@ -60,17 +60,6 @@ const SiteFooter = () => {
                 ↗
               </span>
             </a>
-            <a
-              className="footer-link"
-              href="https://read.cv/mariafaulisi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read.cv
-              <span className="footer-link-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </a>
           </div>
           <div className="footer-col">
             <p className="eyebrow">Index</p>

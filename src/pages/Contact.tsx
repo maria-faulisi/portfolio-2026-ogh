@@ -139,14 +139,6 @@ const Contact = () => {
                 >
                   LinkedIn
                 </a>
-                <span style={{ color: "var(--mist)" }}> · </span>
-                <a
-                  href="https://read.cv/mariafaulisi"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Read.cv
-                </a>
               </p>
             </div>
 
