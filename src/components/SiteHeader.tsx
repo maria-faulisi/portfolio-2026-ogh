@@ -40,7 +40,9 @@ const SiteHeader = () => {
             ? "About the practice"
             : pathname === "/contact"
               ? "Open to conversations"
-              : "";
+              : pathname === "/cv"
+                ? "Curriculum vitae"
+                : "";
 
   return (
     <header className={`site-header ${scrolled ? "is-scrolled" : ""}`}>
@@ -94,6 +96,13 @@ const SiteHeader = () => {
           >
             <span className="nav-index">03</span>
             <span>Contact</span>
+          </NavLink>
+          <NavLink
+            to="/cv"
+            className={({ isActive }) => (isActive ? "is-active" : "")}
+          >
+            <span className="nav-index">04</span>
+            <span>CV</span>
           </NavLink>
         </nav>
 

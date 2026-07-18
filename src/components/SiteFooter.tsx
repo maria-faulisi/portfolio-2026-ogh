@@ -83,6 +83,9 @@ const SiteFooter = () => {
             <Link className="footer-link" to="/contact">
               Contact
             </Link>
+            <Link className="footer-link" to="/cv">
+              CV
+            </Link>
           </div>
           <div className="footer-col footer-colophon">
             <p className="eyebrow">Colophon</p>

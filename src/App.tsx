@@ -8,6 +8,7 @@ import SiteFooter from "./components/SiteFooter";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import Cv from "./pages/Cv";
 import DesignSystemsAllstate from "./case-studies/DesignSystemsAllstate";
 import DesignSystemsHarvest from "./case-studies/DesignSystemsHarvest";
 import DesignSystemsPanduit from "./case-studies/DesignSystemsPanduit";
@@ -36,6 +37,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cv" element={<Cv />} />
           <Route
             path="/design-systems/allstate"
             element={<DesignSystemsAllstate />}
