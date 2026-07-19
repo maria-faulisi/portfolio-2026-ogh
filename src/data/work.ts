@@ -55,7 +55,7 @@ export const work: Record<WorkId, Work> = {
     kindred: [
       {
         id: "d-allstate",
-        reason: "Same company — quote flow rebuilt against this same system.",
+        reason: "Same company: quote flow rebuilt against this same system.",
       },
       {
         id: "ds-panduit",
@@ -71,8 +71,8 @@ export const work: Record<WorkId, Work> = {
     kicker: "Dual-stack Component Library",
     title: "Clarifying guidance across a Rails + React system.",
     subtitle:
-      "Separating implementation paths and giving each its own contract — making correct usage easier than guesswork.",
-    years: "2021 — 2023",
+      "Separating implementation paths and giving each its own contract, making correct usage easier than guesswork.",
+    years: "2021 — 2025",
     blurb:
       "Reduced confusion in a dual-stack system by giving Rails and React their own implementation contracts. 40% adoption increase, 60% fewer support requests.",
     role: "Senior Design Engineer",
@@ -82,7 +82,7 @@ export const work: Record<WorkId, Work> = {
       {
         id: "d-harvest",
         reason:
-          "Same company — workflow consolidation built on these primitives.",
+          "Same company: workflow consolidation built on these primitives.",
       },
       {
         id: "ds-allstate",
@@ -110,7 +110,7 @@ export const work: Record<WorkId, Work> = {
       {
         id: "d-panduit",
         reason:
-          "Same company — distributor portal redesign used these primitives.",
+          "Same company: distributor portal redesign used these primitives.",
       },
       {
         id: "ds-allstate",
@@ -137,7 +137,7 @@ export const work: Record<WorkId, Work> = {
     kindred: [
       {
         id: "ds-allstate",
-        reason: "Same company — the system that made the new flow possible.",
+        reason: "Same company: the system that made the new flow possible.",
       },
       {
         id: "d-harvest",
@@ -155,9 +155,9 @@ export const work: Record<WorkId, Work> = {
     title: "Unifying saved and recurring report workflows.",
     subtitle:
       "Identifying duplication that was costing customers and engineers, and consolidating without losing edge cases.",
-    years: "2022 — 2023",
+    years: "2022 — 2025",
     blurb:
-      "Two reporting flows had quietly grown into one. Consolidated without losing edge cases — reducing user rework and engineering complexity.",
+      "Two reporting flows had quietly grown into one. Consolidated without losing edge cases, reducing user rework and engineering complexity.",
     role: "Senior Product Designer",
     surface: "Reporting & analytics workspace",
     href: "/design/harvest",
@@ -165,7 +165,7 @@ export const work: Record<WorkId, Work> = {
       {
         id: "ds-harvest",
         reason:
-          "Same company — the design system that absorbed the consolidated flow.",
+          "Same company: the design system that absorbed the consolidated flow.",
       },
       {
         id: "d-allstate",
@@ -192,7 +192,7 @@ export const work: Record<WorkId, Work> = {
     kindred: [
       {
         id: "ds-panduit",
-        reason: "Same company — the AEM system that backed the new portal.",
+        reason: "Same company: the AEM system that backed the new portal.",
       },
       {
         id: "d-allstate",

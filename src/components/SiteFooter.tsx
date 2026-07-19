@@ -24,7 +24,7 @@ const SiteFooter = () => {
                 ↗
               </span>
             </a>
-            <a
+            {/* <a
               className="footer-link"
               href="https://cal.com/mariafaulisi"
               target="_blank"
@@ -34,7 +34,7 @@ const SiteFooter = () => {
               <span className="footer-link-arrow" aria-hidden="true">
                 ↗
               </span>
-            </a>
+            </a> */}
           </div>
           <div className="footer-col">
             <p className="eyebrow">Elsewhere</p>
@@ -60,17 +60,6 @@ const SiteFooter = () => {
                 ↗
               </span>
             </a>
-            <a
-              className="footer-link"
-              href="https://read.cv/mariafaulisi"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Read.cv
-              <span className="footer-link-arrow" aria-hidden="true">
-                ↗
-              </span>
-            </a>
           </div>
           <div className="footer-col">
             <p className="eyebrow">Index</p>
@@ -82,6 +71,9 @@ const SiteFooter = () => {
             </Link>
             <Link className="footer-link" to="/contact">
               Contact
+            </Link>
+            <Link className="footer-link" to="/cv">
+              CV
             </Link>
           </div>
           <div className="footer-col footer-colophon">

@@ -9,6 +9,19 @@
       content="Maria Faulisi — design engineer working on systems, tokens, and the connective tissue between design and code. Selected works, 2016—2026."
     />
     <meta name="theme-color" content="#F4F1EA" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("ohg-theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link

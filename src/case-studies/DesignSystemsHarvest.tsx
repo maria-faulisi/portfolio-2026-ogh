@@ -29,7 +29,7 @@ const DesignSystemsHarvest = () => {
           </h1>
           <p className="lead">
             Harvest's Porchlight library quietly served two stacks at once.
-            Untangling them — without breaking either — turned a confusing
+            Untangling them, without breaking either, turned a confusing
             system into one engineers could trust.
           </p>
 
@@ -115,8 +115,8 @@ const DesignSystemsHarvest = () => {
             </h4>
             <p>
               Engineers had to navigate two completely different
-              implementation paths — Rails with class-based styling, React
-              with encapsulated components — but the documentation mixed both
+              implementation paths (Rails with class-based styling, React
+              with encapsulated components) but the documentation mixed both
               together without signaling which guidance applied where. The
               result was widespread misinterpretation, inconsistent behavior,
               and constant clarification between teams.
@@ -135,7 +135,7 @@ const DesignSystemsHarvest = () => {
                 <h5>Meet engineers where they are</h5>
                 <p>
                   Front-end specialists and Rails developers needed guidance
-                  tailored to how they actually worked — not a unified middle.
+                  tailored to how they actually worked, not a unified middle.
                 </p>
               </li>
               <li className="triptych-card">
@@ -162,7 +162,7 @@ const DesignSystemsHarvest = () => {
                   <h4>Dual-stack audit</h4>
                   <p>
                     Reviewed every Rails partial, React component, and
-                    Porchlight doc page — mapping naming mismatches, prop
+                    Porchlight doc page, mapping naming mismatches, prop
                     differences, styling inconsistencies, and missing
                     guidance into a single inventory.
                   </p>
@@ -172,8 +172,8 @@ const DesignSystemsHarvest = () => {
                 <div>
                   <h4>Split &amp; restructure documentation</h4>
                   <p>
-                    Redesigned Porchlight docs into two clearly marked tracks
-                    — Rails and React — so developers instantly understood
+                    Redesigned Porchlight docs into two clearly marked tracks,
+                    Rails and React, so developers instantly understood
                     which guidance applied to their implementation.
                   </p>
                 </div>
@@ -193,7 +193,7 @@ const DesignSystemsHarvest = () => {
                   <h4>Cross-team alignment</h4>
                   <p>
                     Partnered with backend, product, and design stakeholders
-                    so both stacks reflected the same UX intent — and so
+                    so both stacks reflected the same UX intent, and so
                     Porchlight became the single source of truth.
                   </p>
                 </div>
@@ -261,7 +261,7 @@ const DesignSystemsHarvest = () => {
                 <div>
                   <h4>Consistency improves fastest when load decreases.</h4>
                   <p>
-                    The lever isn't enforcement — it's lowering the cost of
+                    The lever isn't enforcement; it's lowering the cost of
                     getting it right.
                   </p>
                 </div>

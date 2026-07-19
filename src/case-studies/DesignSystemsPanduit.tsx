@@ -28,7 +28,7 @@ const DesignSystemsPanduit = () => {
             through a <em>shared</em> system.
           </h1>
           <p className="lead">
-            Panduit's digital landscape wasn't just fragmented — it was
+            Panduit's digital landscape wasn't just fragmented; it was
             political. The system became as much a peace treaty as a component
             library.
           </p>
@@ -121,7 +121,7 @@ const DesignSystemsPanduit = () => {
                 <h5>Serve global teams</h5>
                 <p>
                   Different languages, content demands, and marketing
-                  priorities — across regions that didn't share a calendar.
+                  priorities, across regions that didn't share a calendar.
                 </p>
               </li>
               <li className="triptych-card">
@@ -129,7 +129,7 @@ const DesignSystemsPanduit = () => {
                 <h5>Support non-technical authors</h5>
                 <p>
                   Marketers and regional teams needed to publish pages
-                  without engineering help — and without breaking the system.
+                  without engineering help, and without breaking the system.
                 </p>
               </li>
               <li className="triptych-card">
@@ -156,7 +156,7 @@ const DesignSystemsPanduit = () => {
                   <h4>Atomic taxonomy as a neutralizing force</h4>
                   <p>
                     Chose atomic design (atoms, molecules, organisms)
-                    deliberately. The terminology was neutral — it didn't
+                    deliberately. The terminology was neutral; it didn't
                     favor marketing over sales or engineering over design. It
                     became a shared toolkit, not a mandate.
                   </p>
@@ -176,8 +176,8 @@ const DesignSystemsPanduit = () => {
                 <div>
                   <h4>Trained non-technical content authors</h4>
                   <p>
-                    Most people building pages weren't designers or engineers
-                    — they were content authors. I wrote training materials,
+                    Most people building pages weren't designers or engineers;
+                    they were content authors. I wrote training materials,
                     ran workshops, and built docs aimed squarely at them.
                   </p>
                 </div>
