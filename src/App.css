@@ -1158,6 +1158,8 @@
 }
 
 .case-frame {
+  max-width: 860px;
+  margin-inline: auto;
   margin-bottom: var(--s-7);
   border: 1px solid var(--rule);
   border-radius: 8px;
@@ -1167,7 +1169,9 @@
 
 .case-frame img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: top left;
   display: block;
 }
 
