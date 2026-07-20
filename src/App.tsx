@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
+import { trackPageview } from "./analytics";
 
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
@@ -24,6 +25,14 @@ const ScrollToTop = () => {
   return null;
 };
 
+const PageTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageview(location.pathname + location.search);
+  }, [location.pathname, location.search]);
+  return null;
+};
+
 const App = () => {
   return (
     <>
@@ -31,6 +40,7 @@ const App = () => {
         Skip to content
       </a>
       <ScrollToTop />
+      <PageTracker />
       <SiteHeader />
       <main id="main">
         <Routes>

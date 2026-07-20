@@ -29,6 +29,17 @@
       rel="stylesheet"
     />
     <title>Maria Faulisi — Design Engineer · Systems, Tokens, Craft</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZGZRK3YTD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      // send_page_view disabled: react-router pageviews are sent manually, see src/analytics.ts
+      gtag("config", "G-2ZGZRK3YTD", { send_page_view: false });
+    </script>
   </head>
   <body>
     <script>
